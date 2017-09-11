@@ -1,0 +1,1 @@
+Compile as "gcc flip-the-coin.c -o flip-the-coin"
