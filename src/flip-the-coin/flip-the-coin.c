@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 int flip(int* pts);
@@ -53,6 +54,12 @@ int flip(int* pts){
 }
 
 void printflg(){
-	printf("[ * ] Congratulations! Here's your prize: SCMPv8{4_hundr3d_fl1p_fl0p5}\n");
+	int i;
+	int size = 32;	
+	unsigned char* hex[64] = {0x53, 0x43, 0x4d, 0x50, 0x76, 0x38, 0x7b, 0x5f, 0x41, 0x5f, 0x68, 0x75, 0x6e, 0x64, 0x72, 0x33, 0x64, 0x5f, 0x66, 0x6c, 0x31, 0x70, 0x5f, 0x66, 0x6c, 0x30, 0x70, 0x35, 0x5f, 0x7d};
+
+	printf("[ * ] Congratulations! Here's your prize:");
+	for (i = 0; i < size; i++) printf("%c",hex[i]);
+	printf("\n");
 }
 
